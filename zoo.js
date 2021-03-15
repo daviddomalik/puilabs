@@ -47,3 +47,11 @@ function generateRandomAnimal() {
         return new Parrot(generateRandomName(), generateRandomAge());
     }
 }
+
+function onLoad() {
+    var animal = generateRandomAnimal();
+
+    document.getElementById("animal-image").setAttribute("src", animal.image);
+    document.getElementById("animal-image").setAttribute("alt", animal.image_alt);
+    document.getElementById("animal-info").textContent = animal.name + ", " + animal.age;
+}
