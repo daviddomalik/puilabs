@@ -49,9 +49,32 @@ function generateRandomAnimal() {
 }
 
 function onLoad() {
-    var animal = generateRandomAnimal();
+    var saved = JSON.parse(localStorage.getItem("savedAnimal"));
+    var hasSaved = false;
 
-    document.getElementById("animal-image").setAttribute("src", animal.image);
-    document.getElementById("animal-image").setAttribute("alt", animal.image_alt);
-    document.getElementById("animal-info").textContent = animal.name + ", " + animal.age;
+    if (saved === null) {
+        document.getElementById("save").textContent = "Save Me";
+        saved = generateRandomAnimal();
+    } else {
+        document.getElementById("save").textContent = "Clear Me";
+        hasSaved = true;
+    }
+
+    document.getElementById("animal-image").setAttribute("src", saved.image);
+    document.getElementById("animal-image").setAttribute("alt", saved.image_alt);
+    document.getElementById("animal-info").textContent = saved.name + ", " + saved.age;
+
+    document.getElementById("save").addEventListener("click", function() {
+        if (hasSaved) {
+            localStorage.removeItem("savedAnimal");
+            document.getElementById("save").style.display = "none";
+            document.getElementById("feedback").textContent = "Cleared!";
+            document.getElementById("feedback").style.display = "block";
+        } else {
+            localStorage.setItem("savedAnimal", JSON.stringify(saved));
+            document.getElementById("save").style.display = "none";
+            document.getElementById("feedback").textContent = "Saved!";
+            document.getElementById("feedback").style.display = "block";
+        }
+    })
 }
