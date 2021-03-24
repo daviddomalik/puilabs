@@ -20,7 +20,7 @@ function Parrot(name, age) {
 }
 
 var animal = [new Fish(), new Lion(), new Parrot()];
-var names = ["Nemo", "Simba", "Patchy"];
+var names = ["Nemo", "Simba", "Patchy", "Tusky", "Chompers", "Polly", "Harambe", "Dory", "Crush", "Scar"];
 
 function generateRandomIndex(maxIndex) {
     return Math.floor(Math.random() * maxIndex);
@@ -36,7 +36,7 @@ function generateRandomAge() {
 }
 
 function generateRandomAnimal() {
-    let randomIndex = generateRandomIndex(names.length);
+    let randomIndex = generateRandomIndex(animal.length);
     let a = animal[randomIndex];
     
     if (a instanceof Fish) {
@@ -49,32 +49,67 @@ function generateRandomAnimal() {
 }
 
 function onLoad() {
-    var saved = JSON.parse(localStorage.getItem("savedAnimal"));
-    var hasSaved = false;
+    var saved = JSON.parse(localStorage.getItem("savedAnimals"));
+    var show = JSON.parse(localStorage.getItem("showSaved"));
 
     if (saved === null) {
-        document.getElementById("save").textContent = "Save Me";
-        saved = generateRandomAnimal();
+        saved = Array(5);
+        localStorage.setItem("savedAnimals", JSON.stringify(saved));
     } else {
-        document.getElementById("save").textContent = "Clear Me";
-        hasSaved = true;
+        for (let i = 0; i < 5; i++) {
+            if (saved[i] == null) {
+                document.getElementById("save" + String(i + 1)).textContent = "Save Me";
+            } else if (i == show) {
+                document.getElementById("save" + String(i + 1)).textContent = "Clear Me";
+            } else {
+                document.getElementById("save" + String(i + 1)).textContent = saved[i].name;
+            }
+        }
     }
 
-    document.getElementById("animal-image").setAttribute("src", saved.image);
-    document.getElementById("animal-image").setAttribute("alt", saved.image_alt);
-    document.getElementById("animal-info").textContent = saved.name + ", " + saved.age;
+    if (show === null || saved[show] == null) {
+        var temp = generateRandomAnimal();
+        document.getElementById("animal-image").setAttribute("src", temp.image);
+        document.getElementById("animal-image").setAttribute("alt", temp.image_alt);
+        document.getElementById("animal-info").textContent = temp.name + ", " + temp.age;
+    } else {
+        document.getElementById("animal-image").setAttribute("src", saved[show].image);
+        document.getElementById("animal-image").setAttribute("alt", saved[show].image_alt);
+        document.getElementById("animal-info").textContent = saved[show].name + ", " + saved[show].age;
+        
+    }
 
-    document.getElementById("save").addEventListener("click", function() {
-        if (hasSaved) {
-            localStorage.removeItem("savedAnimal");
-            document.getElementById("save").style.display = "none";
-            document.getElementById("feedback").textContent = "Cleared!";
-            document.getElementById("feedback").style.display = "block";
-        } else {
-            localStorage.setItem("savedAnimal", JSON.stringify(saved));
-            document.getElementById("save").style.display = "none";
-            document.getElementById("feedback").textContent = "Saved!";
-            document.getElementById("feedback").style.display = "block";
-        }
-    })
+    var buttons = document.getElementsByTagName("button");
+    let savedShow = show;
+    show = null;
+    localStorage.setItem("showSaved", JSON.stringify(show));
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+            if (saved[i] == null) {
+                if (show === null || saved[show] == null) {
+                    saved[i] = temp;
+                } else {
+                    saved[i] = saved[show];
+                }
+                show = i;
+                document.getElementById("save" + String(i + 1)).style.display = "none";
+                document.getElementById("feedback" + String(i + 1)).textContent = "Saved!";
+                document.getElementById("feedback" + String(i + 1)).style.display = "block";
+            } else if (i == savedShow) {
+                saved[i] = null;
+                show = null;
+                document.getElementById("save" + String(i + 1)).style.display = "none";
+                document.getElementById("feedback" + String(i + 1)).textContent = "Cleared!";
+                document.getElementById("feedback" + String(i + 1)).style.display = "block";
+            } else {
+                show = i;
+                document.getElementById("save" + String(i + 1)).style.display = "none";
+                document.getElementById("feedback" + String(i + 1)).textContent = "Up Next!";
+                document.getElementById("feedback" + String(i + 1)).style.display = "block";
+            }
+            localStorage.setItem("savedAnimals", JSON.stringify(saved));
+            localStorage.setItem("showSaved", JSON.stringify(show));
+        })
+    }
 }
