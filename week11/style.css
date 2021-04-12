@@ -19,11 +19,16 @@ body > * {
     align-items: center;
     padding: 0.75rem;
     margin-bottom: 2rem;
+
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
   }
   
   /* TODO: Add styles here to gradually fade out the notice */
   /* HINT: You'll need to use the opacity property */
   #notice.dismissed {
+      opacity: 0;
+      transition-duration: 1000ms;
   }
   
   #case-date-update {
@@ -41,4 +46,5 @@ body > * {
   #dismiss-notice:hover {
     background-color: rgb(56, 178, 172);
     fill: #fff;
+    transition-duration: 500ms;
   }

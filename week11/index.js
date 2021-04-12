@@ -6,7 +6,7 @@ function init() {
       const notice = e.currentTarget.parentElement;
       notice.classList.add("dismissed");
     };
-    // loadPlotly();
+    loadPlotly();
   }
   
   function loadPlotly() {
@@ -47,7 +47,8 @@ function init() {
                 color: "black",
                 width: 2
               }
-            }
+            },
+            text: college
           }
         ];
   
