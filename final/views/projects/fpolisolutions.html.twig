@@ -1,0 +1,123 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../../styles/css/projects.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+    <section class="hero container-fluid dark">
+        <div class="row">
+            <div id="title" class="col-12 col-xl-6">
+                <h1>FPoliSolutions</h1>
+                <h3>Detailing niche software consulting for potential clients.</h3>
+            </div>
+            <div class="col-12 col-xl-6">
+                <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/fpoli.jpg" />
+            </div>
+        </div>
+        <div class="row" id="stats">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Role</h6>
+                <p>Lead Developer</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Tools</h6>
+                <p>LAPP stack<br />
+                    Git<br />
+                    Twig<br />
+                    jQuery & AJAX<br />
+                    Figma<br />
+                    PHPUnit & Selenium</br>
+                    Bootstrap</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Timeline</h6>
+                <p>Summer Internship<br />
+                    May 2020 - Aug 2020</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Domain</h6>
+                <p>Visual Design<br />
+                    Agile Software Development<br />
+                    Database Design<br />
+                    Accessibility & SEO Analysis<br />
+                    Unit and Automated Testing</p>
+            </div>
+        </div>
+    </section>
+    <section id="pgs" class="row container-fluid">
+        <div class="card card-body problem col-12 col-xl-4">
+            <h6>Problem</h6>
+            <h5>Old website was poorly designed, contained out-of-date information, and was difficult to update.</h5>
+            <p>FPoliSolutions (FPS) had previously contracted out the development and management of their website to an external firm. All changes had to be sent to the firm, took several days to be addressed, and cost extra money. These deterrents left the website out-of-date.</p>
+        </div>
+        <div class="card card-body goal col-12 col-xl-4">
+            <h6>Goal</h6>
+            <h5>Develop a tool to better connect with potential clients.</h5>
+            <p>FPS needed a tool to advertise the company and clarify the unique work they do. After effectively informing their audience, a line of communication should allow potential clients or employees to contact the company.</p>
+        </div>
+        <div class="card card-body solution col-12 col-xl-4">
+            <h6>Solution</h6>
+            <h5>Build a new website in-house and interface with a database for easy updates and data transfer.</h5>
+            <p>Now with the technical ability to host and manage their own website, I assisted FPS in the design and construction of a new web application. The website has pages that detail the software solutions FPS provides to certain industries. Two forms send job applications and contact requests to a database that are easily accessible to employees. With the site hosted on FPS servers, changes can be made quickly at no cost.</p>
+        </div>
+    </section>
+    <section id="content" class="container-fluid">
+        <h6>Process</h6>
+        <p>When I was brought on to the project, I was given a home page design and an incomplete style guide. FPoliSolutions (FPS) already had a clear idea of their intended user. My first task was to help complete the style guide and continue prototyping more pages to establish a consistent, user-friendly theme that fits the character of the company.</p>
+        <div class="subheader">
+            <h6 class="step">01</h6>
+            <h6>Development Workflow</h6>
+        </div>
+        <h5>Development followed an agile process with two-week sprints and daily scrum meetings.</h5>
+        <p>FPS follows an agile software development process that consisted of biweekly sprint planning meetings and daily scrum meetings to share progress. This web application had its own sprint dedicated to it - occasionally I would lead the sprint planning meetings myself. To keep track of tasks, we used the JIRA platform and moved each item from the backlog to a "To-Do -> In Progress -> Complete" outline at the beginning of each sprint.</p>
+        <div class="subheader">
+            <h6 class="step">02</h6>
+            <h6>Design</h6>
+        </div>
+        <h5>Every page begins with a Figma prototype.</h5>
+        <p>Given the first iteration of a home page, I was expected to extrapolate that design and wireframe all the other site pages. The result was an interactive Figma prototype that laid out our plan for the website before ever writing any code. After showing the initial design around the company, I received feedback that the design needed more of the personal touch you'd expect from a small company. My second design addressed these concerns and incorporated many stock images of the industry and left space for company photos.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/first-figma-design.jpg" alt="First Figma Design" />
+        <p class="caption">Initial website design iteration on Figma</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/second-figma-design.jpg" alt="Second Figma Design" />
+        <p class="caption">Final website design iteration on Figma</p>
+        <div class="subheader">
+            <h6 class="step">03</h6>
+            <h6>Front-End</h6>
+        </div>
+        <h5>A front-end powered by Bootstrap, SASS, jQuery, and Twig.</h5>
+        <p>Through this project I learned the ins-and-outs of Bootstrap, which served as the foundation for the front-end of our site. With SASS, a CSS preprocessor, I was able to make more advanced modifications by compiling my own custom copy of Bootstrap while keeping all styling clean and organized. The template engine Twig is used throughout the site to load repetitive content and fill in database entries into the code of dynamic pages like News. Lastly, jQuery was incorporated across the site for various interactive functionality plus client-side form validation with the jQuery Validation plugin. Other tools like jQuery Validation Tooltips, a Bootstrap Date-Range Picker, Dropdown Multi-Select Tool, and Particles.js enhanced the sites visual aesthetic and functionality.</p>
+        <div class="subheader">
+            <h6 class="step">04</h6>
+            <h6>Back-End</h6>
+        </div>
+        <h5>Integrating PHP and PostgreSQL to assist with CRUD operations.</h5>
+        <p>Database integration was necessary to both load content into the website and receive and store information from users. We adhered to the Model, View, Controller standard and utilized PHP to build our back-end. I developed the Router and View controllers to display the appropriate pages when requested, as well as wrote model functions for seven database tables. Running my PostgreSQL script created the database and generated temporary data used in testing the site.</p>
+        <div class="subheader">
+            <h6 class="step">05</h6>
+            <h6>Mobile Responsiveness & Browser Compatibility</h6>
+        </div>
+        <h5>Guaranteed to be viewable on any device and any browser.</h5>
+        <p>It was a priority for the website to fit on devices of all sizes and be compatible in a variety of web browsers. By customizing Bootstrap's preset breakpoints, I made five different responsive layouts for large desktops, laptops, tablets, and various phones. I also tested the site on the five major browsers to ensure compatibility on each, even accommodating many of the fallacies in Internet Explorer. Before deployment, I explored the site on a number of devices using LambdaTest's real-time device simulation software to confirm compatibility on devices we didn't have on-hand.</p>
+        <div class="subheader">
+            <h6 class="step">06</h6>
+            <h6>Accessibility & SEO</h6>
+        </div>
+        <h5>Ensuring the website would be found by many and interpreted by all.</h5>
+        <p>To complete a robust website, I evaluated any accessibility issues in our website using the WCAG 2.0 guidelines and modified my code to ensure we met Level A compliance. My research into website Search Engine Optimization revealed several tricks to improve the relevance of our site in search results, such as using HTML meta tags, creating a sitemap for web indexing, and utilizing Google's structured data functionality.</p>
+        <div class="subheader">
+            <h6 class="step">07</h6>
+            <h6>Testing</h6>
+        </div>
+        <h5>Maintaining robust functionality throughout change.</h5>
+        <p>This last step is always one of the most important to me, especially for projects that I will be handing off to a client and not maintaining myself. Every model and most controllers were tested to 100% coverage using over 30 PHPUnit tests. The interactive and dynamic content in our views was tested using Selenium, again on numerous browsers.</p>
+        <div class="projects-more-button">
+            <a href="https://www.fpolisolutions.com/" target="_blank" class="btn btn-4 btn-4c icon-arrow-right" role="button">VIEW SITE</a>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

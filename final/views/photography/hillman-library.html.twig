@@ -1,0 +1,67 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../../styles/css/photography.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+    <div class="hero-img container-fluid">
+        <h1>Hillman Library</h1>
+    </div>
+    <section class="gallery container-fluid">
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-001.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-011.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-010.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-009.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-002.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-005.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-007.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-006.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-003.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-004.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-008.jpg" />
+        </div>
+        <p class="description">This series was prompted for an assignment on portrait and place for Carnegie Mellon's Digital Photography I course. The objective was to explore an area and capture the relationship between a location and the people that reside in it. This required frequent visits to the area over a month.<br /><br />
+        I chose the area between Hillman Library and Posvar Hall on the campus of the University of Pittsburgh. This location interested me because lots of college students use the area for class, to study, and walk to residence halls. But the atmosphere is very different depending on the weather and time of day.<br /><br />            
+        I attempt to use changes in color, perspective, and repeated patterns to show this progression.</p>
+        <button class="btn btn-4 btn-4c icon-arrow-up scroll-top">SCROLL TO TOP</button>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="../../js/photography.js"></script>
+
+    <style>
+        .hero-img {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.6), 
+                    rgba(0, 0, 0, 0.6)
+                ), url("https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/hillman-library/hillman-library-007.jpg");
+            background-position: center center;
+        }
+    </style>
+{% endblock %}
+

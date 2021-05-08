@@ -1,0 +1,558 @@
+@import 'variables';
+
+/* HOME.SCSS */
+
+// LANDING PAGE ANIMATION
+$text-size-xxl: 172px;
+$text-width-collapsed-xxl: 119px;
+$first-width-expanded-xxl: 540px;
+$last-width-expanded-xxl: 840px;
+$text-offset-x-xxl: 23px;
+$text-offset-y-xxl: 40px;
+
+#load-animation {
+	width: 100%;
+	height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-size: 100% 400%;
+	background-image: linear-gradient(to bottom, $darkest 33.333333%, $lightest 33.333333% 66.666667%, $darkest 66.666667%);
+	animation: changeColor 1s ease-in-out 3s 1;
+    animation-fill-mode: forwards;
+    
+    h1 {
+        font-family: manometer-sans,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: $text-size-xxl;
+    
+        margin: 0px;
+        width: $text-width-collapsed-xxl;
+        height: min-content;
+        color: $lightest;
+        overflow: hidden;
+    
+        position: relative;
+    }
+}
+
+@keyframes changeColor {
+  0% {background-position: 0% 0%;}
+  75% {height: 100vh;}
+  100% {background-position: 0% 100%; height: 0vh;}
+}
+
+#first-name {
+	mix-blend-mode: difference;
+
+	text-align: right;
+	left: $text-offset-x-xxl;
+	top: -$text-offset-y-xxl;
+	direction: rtl;
+
+	animation: 1s ease-out 1s 1 expandFirstName;
+    animation-fill-mode: forwards;
+}
+
+#last-name {
+	mix-blend-mode: difference;
+
+	left: -$text-offset-x-xxl;
+	top: $text-offset-y-xxl;
+
+	animation: 1s ease-out 1s 1 expandLastName;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandFirstName {
+    0% {
+        width: $text-width-collapsed-xxl;
+    }
+    100% {
+        width: $first-width-expanded-xxl;
+    }
+}
+
+@keyframes expandLastName {
+    0% {
+        width: $text-width-collapsed-xxl;
+    }
+    100% {
+        width: $last-width-expanded-xxl;
+    }
+}
+
+// Mobile responsiveness for landing page
+$text-size-xl: 120px;
+$text-width-collapsed-xl: 80px;
+$first-width-expanded-xl: 370px;
+$last-width-expanded-xl: 590px;
+$text-offset-x-xl: 16px;
+$text-offset-y-xl: 30px;
+
+@media #{$xxl} {
+    #load-animation h1 {
+        font-size: $text-size-xl;
+        width: $text-width-collapsed-xl;
+    }
+
+    #first-name {
+        left: $text-offset-x-xl;
+        top: -$text-offset-y-xl;
+    }
+
+    #last-name {
+        left: -$text-offset-x-xl;
+        top: $text-offset-y-xl;
+    }
+
+    @keyframes expandFirstName {
+        0% {
+            width: $text-width-collapsed-xl;
+        }
+        100% {
+            width: $first-width-expanded-xl;
+        }
+    }
+
+    @keyframes expandLastName {
+        0% {
+            width: $text-width-collapsed-xl;
+        }
+        100% {
+            width: $last-width-expanded-xl;
+        }
+    }
+}
+
+$text-size-lg: 80px;
+$text-width-collapsed-lg: 54px;
+$first-width-expanded-lg: 250px;
+$last-width-expanded-lg: 390px;
+$text-offset-x-lg: 8px;
+$text-offset-y-lg: 20px;
+
+@media #{$xl} {
+    #load-animation h1 {
+        font-size: $text-size-lg;
+        width: $text-width-collapsed-lg;
+    }
+
+    #first-name {
+        left: $text-offset-x-lg;
+        top: -$text-offset-y-lg;
+    }
+
+    #last-name {
+        left: -$text-offset-x-lg;
+        top: $text-offset-y-lg;
+    }
+
+    @keyframes expandFirstName {
+        0% {
+            width: $text-width-collapsed-lg;
+        }
+        100% {
+            width: $first-width-expanded-lg;
+        }
+    }
+
+    @keyframes expandLastName {
+        0% {
+            width: $text-width-collapsed-lg;
+        }
+        100% {
+            width: $last-width-expanded-lg;
+        }
+    }
+}
+
+$text-size-md: 60px;
+$text-width-collapsed-md: 40px;
+$first-width-expanded-md: 190px;
+$last-width-expanded-md: 300px;
+$text-offset-x-md: 8px;
+$text-offset-y-md: 14px;
+
+@media #{$lg} {
+    #load-animation h1 {
+        font-size: $text-size-md;
+        width: $text-width-collapsed-md;
+    }
+
+    #first-name {
+        left: $text-offset-x-md;
+        top: -$text-offset-y-md;
+    }
+
+    #last-name {
+        left: -$text-offset-x-md;
+        top: $text-offset-y-md;
+    }
+
+    @keyframes expandFirstName {
+        0% {
+            width: $text-width-collapsed-md;
+        }
+        100% {
+            width: $first-width-expanded-md;
+        }
+    }
+
+    @keyframes expandLastName {
+        0% {
+            width: $text-width-collapsed-md;
+        }
+        100% {
+            width: $last-width-expanded-md;
+        }
+    }
+}
+
+$text-size-sm: 40px;
+$text-width-collapsed-sm: 28px;
+$first-width-expanded-sm: 140px;
+$last-width-expanded-sm: 200px;
+$text-offset-x-sm: 5px;
+$text-offset-y-sm: 10px;
+
+@media #{$md} {
+    #load-animation h1 {
+        font-size: $text-size-sm;
+        width: $text-width-collapsed-sm;
+    }
+
+    #first-name {
+        left: $text-offset-x-sm;
+        top: -$text-offset-y-sm;
+    }
+
+    #last-name {
+        left: -$text-offset-x-sm;
+        top: $text-offset-y-sm;
+    }
+
+    @keyframes expandFirstName {
+        0% {
+            width: $text-width-collapsed-sm;
+        }
+        100% {
+            width: $first-width-expanded-sm;
+        }
+    }
+
+    @keyframes expandLastName {
+        0% {
+            width: $text-width-collapsed-sm;
+        }
+        100% {
+            width: $last-width-expanded-sm;
+        }
+    }
+}
+
+$text-size-xs: 110px;
+$text-width-collapsed-xs: 76px;
+$first-width-expanded-xs: $text-width-collapsed-xs;
+$last-width-expanded-xs: $text-width-collapsed-xs;
+$text-offset-x-xs: 14px;
+$text-offset-y-xs: 26px;
+
+@media #{$sm} {
+    #load-animation {
+        animation: changeColor 1s ease-in-out 1s 1;
+        animation-fill-mode: forwards;
+    
+        h1 {
+            font-size: $text-size-xs;
+            width: $text-width-collapsed-xs;
+        }
+    }
+
+    #first-name {
+        left: $text-offset-x-xs;
+        top: -$text-offset-y-xs;
+    }
+
+    #last-name {
+        left: -$text-offset-x-xs;
+        top: $text-offset-y-xs;
+    }
+
+    @keyframes expandFirstName {
+        0% {
+            width: $text-width-collapsed-xs;
+        }
+        100% {
+            width: $first-width-expanded-xs;
+        }
+    }
+
+    @keyframes expandLastName {
+        0% {
+            width: $text-width-collapsed-xs;
+        }
+        100% {
+            width: $last-width-expanded-xs;
+        }
+    }
+}
+
+// Disable scroll during landing page
+@keyframes enableScroll {
+    0% {
+        overflow-y: hidden;
+    }
+    100% {
+        overflow-y: scroll;
+    }
+}
+
+// Greeting at top of home page
+#hello {
+    height: 60vh;
+    padding-left: 25%;
+    padding-right: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h1 {
+        display: inline;
+    }
+
+    #name {
+        color: $accent;
+    }
+
+    @media #{$xl} and (orientation: portrait) {
+        padding-left: 20%;
+        padding-right: 20%;
+
+        h1 {
+            font-size: $font-size-base * 2.3;
+        }
+    }
+
+    @media #{$xl} and (orientation: landscape) {
+        padding-left: 15%;
+        padding-right: 15%;
+        height: 65vh;
+
+        h1 {
+            font-size: $font-size-base * 1.6;
+        }
+    }
+  
+    @media #{$lg} and (orientation: portrait)  {
+        h1 {
+            font-size: $font-size-base * 2;
+        }
+    }
+
+    @media #{$lg} and (orientation: landscape) {
+        padding-left: 15%;
+        padding-right: 15%;
+        height: 73vh;
+
+        h1 {
+            font-size: $font-size-base * 1.4;
+        }
+    }
+
+    @media #{$md} {
+        height: 91vh;
+
+        h1 {
+            font-size: $font-size-base * 1.8;
+        }
+    }
+
+    @media #{$sm} {
+        h1 {
+            font-size: $font-size-base * 1.5;
+        }
+    }
+}
+
+.card {
+    @media #{$lg} {
+        .card-image {
+            padding: 0px;
+        }
+    }
+}
+
+// Chatbot
+$chat-margin: 30px;
+$curved-corners: 4px;
+
+#chatbot {
+    position: fixed;
+    bottom: $chat-margin;
+    right: $chat-margin;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    @media #{$lg} and (orientation: portrait) {
+        height: calc(100% - #{$chat-margin} * 2);
+        width: calc(100vw - #{$chat-margin} * 2);
+        justify-content: flex-end;
+    }
+
+    @media #{$md} {
+        bottom: $chat-margin / 2;
+        right: $chat-margin / 2;
+        height: calc(100% - #{$chat-margin});
+        width: calc(100vw - #{$chat-margin});
+        justify-content: flex-end;
+    }
+}
+
+#chat {
+    background-color: $lightest;
+    border-radius: $curved-corners;
+    box-shadow: 0px 0px 4px 2px rgba($darkest, 0.3);
+    margin-bottom: 20px;
+
+    width: 30vw;
+
+    font-size: $font-size-base * 0.8;
+
+    @media #{$xl} and (orientation: landscape) {
+        width: 40vw;
+    }
+
+    @media #{$xl} and (orientation: portrait) {
+        width: 50vw;
+    }
+
+    @media #{$lg} and (orientation: landscape) {
+        width: 50vw;
+    }
+
+    @media #{$lg} and (orientation: portrait) {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    @media #{$md} {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+#root {
+    list-style: none;
+    padding: 12px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    max-height: 60vh;
+    overflow-y: scroll;
+
+    @media #{$lg} and (orientation: portrait) {
+        max-height: 74vh;
+    }
+
+    @media #{$md} {
+        max-height: 74vh;
+    }
+
+    .vf {
+        max-width: 70%;
+        margin-bottom: 4px;
+        white-space: nowrap;
+
+        img {
+            width: 40px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        p {
+            display: inline-block;
+            margin: 0px;
+            margin-left: 8px;
+            padding: 8px;
+            background-color: $darkest;
+            color: $lightest;
+            border-radius: $curved-corners;
+            width: 100%;
+            white-space: normal;
+        }
+    }
+
+    .user {
+        padding: 16px;
+        margin-bottom: 4px;
+        max-width: 70%;
+        display: inline-block;
+        align-self: flex-end;
+
+        padding: 8px;
+        background-color: $accent;
+        color: $darkest;
+        border-radius: $curved-corners;
+    }
+}
+
+#text-entry {
+    display: flex;   
+}
+
+#user-input {
+    border: none;
+    width: 100%;
+    padding: 8px;
+    
+    border-bottom-left-radius: $curved-corners;
+}
+
+#send {
+    background-color: $accent;
+    color: $lightest;
+    font-size: 24px;
+    border: none;
+    border-bottom-right-radius: $curved-corners;
+}
+
+#chatbot-toggle {
+    background-color: $accent;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba($darkest, 0.5);
+    align-self: flex-end;
+
+    color: $lightest;
+    line-height: 1;
+    font-size: 36px;
+
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    transition: 200ms;
+
+    &:hover {
+        box-shadow: 4px 4px 4px rgba($darkest, 0.8);
+        transition: 200ms;
+    }
+}

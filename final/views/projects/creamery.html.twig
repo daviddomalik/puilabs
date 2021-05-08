@@ -1,0 +1,116 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../../styles/css/projects.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+    <section class="hero container-fluid dark">
+        <div class="row">
+            <div id="title" class="col-12 col-xl-6">
+                <h1>A&M Creamery</h1>
+                <h3>Employee management system to increase company productivity.</h3>
+            </div>
+            <div class="col-12 col-xl-6">
+                <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/creamery.jpg" />
+            </div>
+        </div>
+        <div class="row" id="stats">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Role</h6>
+                <p>Designer & Developer</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Tools</h6>
+                <p>Ruby on Rails<br />
+                    Materialize framework<br />
+                    Authorization & Authentication gems<br />
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Timeline</h6>
+                <p>Semester-long course<br />
+                    January 2020 - May 2020</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Domain</h6>
+                <p>Software Development<br />
+                    Wireframing<br />
+                    Experience Design</p>
+            </div>
+        </div>
+    </section>
+    <section id="pgs" class="row container-fluid">
+        <div class="card card-body problem col-12 col-xl-4">
+            <h6>Problem</h6>
+            <h5>Lacking the ability to track key store data, manage employees, and generate payrolls.</h5>
+            <p>The A&M Creamery has 7 locations and the Pittsburgh area but would like to expand while cutting costs. The owners  acknoledged the inefficient use of time and resources spent managing these stores, while store managers and employees complain about the poor line of communication with each other and the company.</p>
+        </div>
+        <div class="card card-body goal col-12 col-xl-4">
+            <h6>Goal</h6>
+            <h5>Provide information useful to ownership, managers, and employees to ensure successful small business management.</h5>
+            <p>Company ownership needed a way to assign employees to stores, easily generate payroll for employees, and make sure all operations are going smoothly. Store managers wanted a better way to schedule employees to fill the shifts at their store. Employees preferred to access their shift schedule digitally so they can check when they need to be at work.</p>
+        </div>
+        <div class="card card-body solution col-12 col-xl-4">
+            <h6>Solution</h6>
+            <h5>Build a web application that derives useful insights from the company databases and allows for efficient data management.</h5>
+            <p>I built a web application with the appropriate permissions to allow for all of these features in an accessible digital format. This way, employees see changes from their superiors instantly and can always check the schedule. Owners can save valuable time calculating payroll. And each employee received a custom dashboard with the most important information to them based on their role at the company. </p>
+        </div>
+    </section>
+    <section id="content" class="container-fluid">
+        <h6>Process</h6>
+        <p>This project was completed throughout my sophomore spring semester at Carnegie Mellon University in 67-272 Application Design and Development. With the guidance of our professor, each student completed their own copy of the project while meeting rigorous requirements discussed below.</p>
+        <div class="subheader">
+            <h6 class="step">01</h6>
+            <h6>Use Cases</h6>
+        </div>
+        <h5>Use cases guided development from start to finish.</h5>
+        <p>Based on a <span><a href="https://david-domalik-personal-website.s3.amazonaws.com/files/Creamery_Narrative.pdf" target="_blank">short three-page description</a></span>, I began the project by identifying a set of <span><a href="https://david-domalik-personal-website.s3.amazonaws.com/files/Creamery_Use_Cases.pdf" target="_blank"></a>use cases</a></span>. These cases were categorized as A, B, or C-level in order of importance and matched with a short list of actors who would be interacting with the app. This step was crucial in guiding my work to its completion since it allowed me to plan ahead and develop in a time-efficient manner without forgetting important functionality.</p>
+        <div class="subheader">
+            <h6 class="step">02</h6>
+            <h6>Data Design</h6>
+        </div>
+        <h5>The database was built after defining the data and making an entity-relationship diagram.</h5>
+        <p>Before setting up the database, I took important precautions to ensure it would be robust long-term and fit the needs of the application. I began with an <span><a href="https://david-domalik-personal-website.s3.amazonaws.com/files/Creamery_ERD.pdf" target="_blank">entity-relationship diagram</a></span> to denote the relational structure of the database as well as record certain limitations in the cardinality of each relation. This diagram was then normalized into third normal form to prevent data anomalies and converted to a <span><a href="https://david-domalik-personal-website.s3.amazonaws.com/files/Creamery_Relational_Schema.pdf" target="_blank">relational schema</a></span> containing notes on implementation. Finally, I compiled a <span><a href="https://david-domalik-personal-website.s3.amazonaws.com/files/Creamery_Data_Dictionary.pdf" target="_blank">data dictionary</a></span> that further detailed data types and better described the purpose of each attribute. These three documents affirmed that I made the database correctly upon the first implementation.</p>
+        <div class="subheader">
+            <h6 class="step">03</h6>
+            <h6>MVC Framework</h6>
+        </div>
+        <h5>The model, view, and controller were each developed at separate stages of the process.</h5>
+        <p>Using the framework provided with Ruby on Rails, my application followed the MVC standard of software development. Once the database was created, I began writing the code for the models, which interact directly with the database and aid in filtering and verifying data integrity. After unit testing the models, work continued in the controller. This staged process helped me know that any new errors were isolated to the controller, helping with debugging. The controller would pass data from the model to the appropriate view page, developed with Rails's built-in template engine.</p>
+        <div class="subheader">
+            <h6 class="step">04</h6>
+            <h6>Wireframe Prototyping</h6>
+        </div>
+        <h5>Great design starts with rough sketches.</h5>
+        <p>The application was built using Google's Materialize CSS framework that contributed a pre-defined set of styles and classes. But aspects such as page layout required additional design, which is where I incorporated wireframe prototyping. By quickly sketching several ideas, I identified the best features to include in my final design and didn't waste time manually programming a poor interface. I moved from low-fidelity sketches to <span><a href="https://david-domalik-personal-website.s3.amazonaws.com/files/Creamery_Wireframes_Annotated.pdf" target="_blank">Adobe XD designs</a></span> that included annotations to better explain my design choices. These prototypes were especially beneficial for the user dashboards, which contain information custom to the employee's role at the company.</p>
+        <div class="subheader">
+            <h6 class="step">05</h6>
+            <h6>Design</h6>
+        </div>
+        <h5>Designed to increase speed and reduce cognitive load.</h5>
+        <p>Designing for the user often means thinking about the small details that refine one's experience. To be successful, I needed the application to be quick and stress-free. If an operation is impossible - say, editing your pay grade as an employee - the option is hidden from view rather than disabled to prevent frustration. Default values were included in as many forms as possible, while other data persisted between pages to remove repeated data entry. For example, when generating payroll from a store's info page, the application provides a default date range for the past two weeks and calulates only the employees at that store. After generation, these filters are included on the payroll in case the manager forgets what inputs were used. Alert messages are used frequently throughout the site to confirm actions are completed successfully.<br /><br />
+        Most importantly, each user's dashboard contained information relevant to them. Company owners could easily reassign employees from over-staffed stores, generate payroll for a specific store, and see if any employees are freqeuntly missing shifts. Manager dashboards provided a quick link to schedule shifts to employees and view today's schedule so they know who to expect in the store. Employees always had quick access to their upcoming schedule and the amount of their most recent paycheck. These dashboards used basic shift data, merged it with several other tables, and then filtered it to reveal valuable insight for each role.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/creamery-admin-dashboard.jpg" alt="Admin Dashboard" />
+        <p class="caption">Admin Dashboard</p>
+        <div class="subheader">
+            <h6 class="step">06</h6>
+            <h6>Gem Integration</h6>
+        </div>
+        <h5>Increased functionality and improved code style with Ruby gems.</h5>
+        <p>Ruby on Rails has hundreds of plug-ins known as "gems" that can be easily imported for use in your program. In my application, gems like simple_form and validates_timeliness aided in form construction and date/time input validation. CanCanCan managed authorization and authentication in a secure fashion. will_paginate increased page load times and reduced content overload by adding pagination to the site. Then a handful of testing gems helped generate fake testing data and controlled both unit and automated testing. Finally, simplecov ensured the website had 100% test coverage.</p>
+        <div class="subheader">
+            <h6 class="step">07</h6>
+            <h6>100% Test Coverage</h6>
+        </div>
+        <h5>No part of the application is left untested.</h5>
+        <p>A strict requirement of the project was to meet 100% test coverage, meaning every line of code is touched by my unit tests. I wrote tests for both the models and controllers. Cucumber tests were provided for our views, allowing me to experiment with test-driven development. With 100% coverage, I can be confident my program is fully-functional with minimal bugs.</p>
+        <div class="projects-more-button">
+            <a href="contact" target="_blank" class="btn btn-4 btn-4c icon-arrow-right disabled" role="button">DEMO AVAILABLE BY REQUEST</a>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

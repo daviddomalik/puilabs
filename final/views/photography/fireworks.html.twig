@@ -1,0 +1,61 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../../styles/css/photography.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+    <div class="hero-img container-fluid">
+        <h1>Fireworks</h1>
+    </div>
+    <section class="gallery container-fluid">
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-003.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-002.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-001.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-010.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-007.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-009.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-008.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-006.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-005.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-004.jpg" />
+        </div>
+        <button class="btn btn-4 btn-4c icon-arrow-up scroll-top">SCROLL TO TOP</button>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="../../js/photography.js"></script>
+
+    <style>
+        .hero-img {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.6), 
+                    rgba(0, 0, 0, 0.6)
+                ), url("https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/fireworks/fireworks-006.jpg");
+            background-position: center 40%;
+        }
+    </style>
+{% endblock %}
+

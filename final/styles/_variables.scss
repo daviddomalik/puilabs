@@ -1,0 +1,58 @@
+@import 'colors';
+
+// Fonts
+$font-family-sans-serif: museo-sans, sans-serif;
+$font-family_base: $font-family-sans-serif;
+$font-weight-normal: 500;
+$font-size-base: 1.25rem;
+
+// Headings
+$headings-font-family: $font-family-sans-serif;
+$headings-font-weight: 300;
+
+// Nav
+$navbar-light-color: $darker;
+$navbar-light-hover-color: $darkest;
+$navbar-light-active-color: $darkest;
+$navbar-light-disabled-color: $lighter;
+$navbar-nav-link-padding-x: 1rem;
+
+// Cards
+$card-color: $lightest;
+$card-bg: $darkest;
+
+// Buttons
+$input-btn-font-family: museo-sans-display, sans-serif;
+$input-btn-padding-y: 0rem;
+$input-btn-padding-x: 0rem;
+$btn-border-radius: 0rem;
+
+// Header and Footer
+$header-height: 80px;
+$stacked-header-height: $header-height + 55px;
+$footer-height: 160px;
+
+// Mobile
+// Must manually change Javascript breakpoints!
+$grid-breakpoints: (
+    xs: 0,
+    sm: 380px,
+    md: 500px,
+    lg: 820px,
+    xl: 1370px,
+    xxl: 1900px
+);
+
+$container-max-widths: (
+    sm: 340px,
+    md: 460px,
+    lg: 760px,
+    xl: 1290px,
+    xxl: 1800px
+);
+
+$sm: "only screen and (max-width : #{map-get($grid-breakpoints, "sm") - 1})";
+$md: "only screen and (max-width : #{map-get($grid-breakpoints, "md") - 1})";
+$lg: "only screen and (max-width : #{map-get($grid-breakpoints, "lg") - 1})";
+$xl: "only screen and (max-width : #{map-get($grid-breakpoints, "xl") - 1}) ";
+$xxl: "only screen and (max-width : #{map-get($grid-breakpoints, "xxl") - 1})";

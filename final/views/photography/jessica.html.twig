@@ -1,0 +1,55 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../../styles/css/photography.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+    <div class="hero-img container-fluid">
+        <h1>Jessica</h1>
+    </div>
+    <section class="gallery container-fluid">
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/jessica/jessica-005.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/jessica/jessica-004.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/jessica/jessica-006.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/jessica/jessica-001.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/jessica/jessica-003.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/jessica/jessica-007.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/jessica/jessica-008.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/jessica/jessica-002.jpeg" />
+        </div>
+        <button class="btn btn-4 btn-4c icon-arrow-up scroll-top">SCROLL TO TOP</button>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="../../js/photography.js"></script>
+
+    <style>
+        .hero-img {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.6), 
+                    rgba(0, 0, 0, 0.6)
+                ), url("https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/jessica/jessica-hero.jpeg");
+            background-position: center 35%;
+        }
+    </style>
+{% endblock %}
+

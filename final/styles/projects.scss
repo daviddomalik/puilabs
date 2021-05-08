@@ -1,0 +1,181 @@
+@import 'variables';
+
+/* projects.SCSS */
+
+body {
+    h1 {
+        font-size: $font-size-base * 4;
+        font-weight: 300;
+
+        @media #{$lg} {
+            font-size: $font-size-base * 3;
+        }
+
+        @media #{$md} {
+            font-size: $font-size-base * 2.5;
+        }
+    }
+
+    h3 {
+        color: $accent;
+        font-weight: 100;
+
+        @media #{$lg} {
+            font-size: $font-size-base * 1.5;
+        }
+
+        @media #{$md} {
+            font-size: $font-size-base * 1.3;
+        }
+    }
+
+    h5 {
+        font-size: $font-size-base * 1.5;
+        font-weight: 500;
+
+        @media #{$md} {
+            font-size: $font-size-base * 1.3;
+        }
+    }
+
+    h6 {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $accent;
+    }
+}
+
+#projects-home {
+    .card-image {
+        @media #{$lg} {
+            padding-right: 0px;
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 90vh;
+
+    #title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media #{$xl} {
+            order: 2;
+            margin-bottom: 80px;
+        }
+    }
+
+    img {
+        margin-bottom: 40px;
+        width: 100%;
+        object-fit: cover;
+        padding-left: 40px;
+
+        @media #{$xl} {
+            order: 2;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            padding-left: 0px;
+        }
+
+        @media #{$lg} {
+            margin-top: 40px;
+        }
+    }
+
+    #stats {
+        div {
+            @media #{$lg} {
+                padding-bottom: 20px;
+                padding-right: 10px;
+            }
+
+            @media #{$md} {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+
+#pgs {
+    .card {
+        border-radius: 0rem;
+        border: none;
+        margin: 0px;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &.goal {
+            background-color: $darker;
+        }
+
+        &.solution {
+            background-color: $accent;
+
+            h6 {
+                color: $lightest;
+            }
+
+            h5, p {
+                color: $darkest;
+            }
+
+            a {
+                color: $lightest;
+            }
+        }
+    }
+}
+
+#content {
+    padding: 40px 25% 40px 25%;
+
+    @media #{$xl} {
+        padding: 10px 20% 10px 20%;
+    }
+
+    @media #{$lg} {
+        padding: 10px 5% 10px 5%;
+    }
+
+    $step-margin-base: 6px;
+
+    .subheader {
+        display: flex;
+        align-items: center;
+    }
+
+    .step {
+        background-color: $accent;
+        color: $lightest;
+        margin-right: $step-margin-base * 2;
+        padding: $step-margin-base ($step-margin-base * 3) $step-margin-base ($step-margin-base * 3);
+    }
+
+    h6 {
+        margin: ($step-margin-base * 5) ($step-margin-base * 2) ($step-margin-base * 3) 0px;        
+    }
+
+    img {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .caption {
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+
+    .projects-more-button {
+        display: flex;
+        justify-content: center;
+
+        text-transform: uppercase;
+    }
+}

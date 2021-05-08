@@ -1,0 +1,131 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../../styles/css/projects.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+    <section class="hero container-fluid dark">
+        <div class="row">
+            <div id="title" class="col-12 col-xl-6">
+                <h1>Residence</h1>
+                <h3>Helping RAs communicate so all residents feel safe and supported.</h3>
+            </div>
+            <div class="col-3 col-xl-1"></div>
+            <div class="col-6 col-xl-4">
+                <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/residence-logo.png" />
+            </div>
+        </div>
+        <div class="row" id="stats">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Team</h6>
+                <p><a href="/index">David Domalik</a> - Front-End Developer & User Researcher<br />
+                    <a href="https://www.linkedin.com/in/nathanblinn/" target="_blank">Nathan Blinn</a> - Back-End Developer & Database Manager<br />
+                    <a href="https://www.linkedin.com/in/noah-yeo-293472157/" target="_blank">Noah Yeo</a> - Developer<br />
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Tools</h6>
+                <p>SwiftUI<br />
+                    Xcode 12<br />
+                    Alamofire<br />
+                    Flutter<br />
+                    VMware<br />
+                    Figma</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Timeline</h6>
+                <p>Mobile Application Design & Development<br />
+                    Fall 2020</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Domain</h6>
+                <p>Mobile Application Development<br />
+                    Agile Software Development<br />
+                    Front-End Development<br />
+                    Visual Design<br />
+                    User Research</p>
+            </div>
+        </div>
+    </section>
+    <section id="pgs" class="row container-fluid">
+        <div class="card card-body problem col-12 col-xl-4">
+            <h6>Problem</h6>
+            <h5>The COVID-19 pandemic makes it harder for RAs and residents to form relationships.</h5>
+            <p>COVID-19 has caused universities to take precautions in campus housing. Residents don't have roommates and are discouraged from spending time in lounges, increasing cases of loneliness. This gives RAs fewer chances to interact with each resident while they take on additional responsibility enforcing COVID policies.</p>
+        </div>
+        <div class="card card-body goal col-12 col-xl-4">
+            <h6>Goal</h6>
+            <h5>Create a tool for RAs to better connect with their residents.</h5>
+            <p>RAs needed additional tools to help them meet the expectations set forth in their job descriptions. Most RAs needed a way to keep track of interactions, communicate COVID violations to other RAs on staff, and generally wanted ways to save time completing their duties.</p>
+        </div>
+        <div class="card card-body solution col-12 col-xl-4">
+            <h6>Solution</h6>
+            <h5>A mobile app that tracks resident interactions and COVID violations, streamlining RA responsibilities. </h5>
+            <p>Our app lets RAs record these data points anytime and anywhere. They then receive convenient insights as to who still needs contacted and who to watch for COVID violations. It also reduces the number of tools RAs need to do their jobs.</p>
+        </div>
+    </section>
+    <section id="content" class="container-fluid">
+        <h6>Problem Space</h6>
+        <p>Residence was a course project I completed my junior year in Carnegie Mellon's Information Systems program. Students were assigned to teams and asked to develop a mobile application for iOS devices using Swift and taught the basics of mobile app development, including the Model-View-ViewModel framework.<br /><br />
+        As a resident assistant (RA) myself, I understood many of the struggles RAs were having due to restrictions in place during the COVID-19 pandemic. After considering a few options, my team settled on an app that would help address many of those pain points.</p>
+        <div class="subheader">
+            <h6 class="step">01</h6>
+            <h6>App Design</h6>
+        </div>
+        <h5>Five main interactions for RAs within our app.</h5>
+        <p>Through a combination of brainstorming and user research, we generated and prioritized a list of features for our app. The core of our app would be a tracking system for resident interactions and COVID policy violations, and thus these features were our top priority, but our app also includes three other tools to help RAs.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/residence-details.png" alt="Viewing a list of all residents and individual resident details" />
+        <p class="caption">Viewing a list of all residents and individual resident details</p>
+        <p>After logging in, the first page RAs see is a list of their residents' names along with a profile picture and room number. This list corresponds to each individual RA's floor number to only show the residents they are responsible for. Tapping a resident opens their Details page containing basic information entered by the resident such as their major and clubs. This info can be used as a conversation starter during interactions with residents. Residents can be reached by tapping the icons to the right of their profile picture.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/residence-interact.png" alt="Marking an interaction with a resident" />
+        <p class="caption">Marking an interaction with a resident</p>
+        <p>We realized early on that our app is only effective if RAs regularly track their interactions with residents. Thus, we needed the process to be as quick and painless as possible. To mark an interaction, users just have to swipe left on the resident's row and tap the 'Interact' button. Successful transactions are confirmed with a pop-up.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/residence-grid.png" alt="Viewing residents in a grid view and reporting a COVID violation" />
+        <p class="caption">Viewing residents in a grid view and reporting a COVID violation</p>
+        <p>To help identify residents who the RA isn't familiar with, we provided a grid view that focuses on faces rather than names. Interactions and violations can both be marked from this screen; in this case, a COVID violation is being submitted in the additional form.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/residence-insights.png" alt="Viewing interaction and COVID insights" />
+        <p class="caption">Viewing interaction and COVID insights</p>
+        <p>The data the RAs log is put to use on the Insights page. The 'No Interactions' insight lists all residents who haven't had an interaction marked in the past week. Those residents can be contacted quickly using the provided message icons. The 'COVID Watchlist' takes data from all RAs in the house and adds it to show which residents frequently go against COVID policy. This solves the problem where one resident could be caught 10 times, each time by a different RA, and always receive a light warning because the RA is unaware of previous violations.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/residence-duty.png" alt="Checking in to a duty shift" />
+        <p class="caption">Checking in to a duty shift</p>
+        <p>One of the duties of an RA is to answer the 'duty phone,' a phone number that all residents can call in case of emergency. Duty happens every night and usually switches between RAs nightly. RA staffs currently use a separate service to operate the duty phone, but our app simplifies things by having the feature built-in. With the press of a button, an RA takes over the duty phone and all RAs and residents have access to their phone number.<br /><br />
+        Residents also have a version of the app with a limited feature set. They have a directory page that contains important phone numbers and the RA on duty. Their profile page looks similar to the RA settings page and is necessary to allow residents to edit the profile details that RAs have access to.</p>
+        <div class="subheader">
+            <h6 class="step">02</h6>
+            <h6>User Research</h6>
+        </div>
+        <h5>Always keeping the target user involved in the development process.</h5>
+        <p>Talking with our users was imperative to having a successful app. At the highest level, we needed to know that this tool was actually fulfilling a need and that our design would be enjoyable to use. I spoke with RAs before development even began to confirm the former, and we reconnected with Figma wireframes for the latter. Our discussion confirmed that the issues I was experiencing as an RA were widespread and not isolated to only me. It also revealed some quantitative insight: about 7 in 10 RAs have no way to track resident interactions, and on average RAs use 6-7 different services to communicate with residents and each other.<br /><br />
+        These tests with RAs also led to some of our most useful recommendations. The grid view was a request from an RA who struggled to identify all residents by name. The inclusion of room numbers was a suggestion from an RA who said they often file violations that involve multiple residents based on the room the violation occurred in. And though the Duty feature isn't necessary for the app to function, it was repeatedly met with excitement when we discussed it with RAs, leading us to increase its priority.</p>
+        <div class="subheader">
+            <h6 class="step">03</h6>
+            <h6>Mobile Mindset</h6>
+        </div>
+        <h5>Designing around the strengths of the mobile platform.</h5>
+        <p>Not all applications work well on a mobile device, while others wouldn't make sense on a desktop. Residence falls into the latter category; it fits well as a mobile application but would fail on a stationary device. This is due to a number of factors that make up the mobile mindset:</p>
+        <ul>
+            <li><strong>Spontaneous Use</strong> - Interactions happen at all times of day all throughout the dorm. Our app must always be available to the user so they can log an interaction or violation whenever one occurs.</li>
+            <li><strong>Quick Actions</strong> - Our app is only effective if the user frequently adds data. To encourage RAs to mark every interaction, we needed the recording process to be as quick and painless as possible. This includes powering on the device and opening our app; two actions that are much quicker on mobile devices.</li>
+            <li><strong>Communications</strong> - Mobile phones are already our primary communication devices. Since our app revolves around interacting with others, it makes sense to integrate and utilize these existing communication features.</li>
+        </ul>
+        <div class="subheader">
+            <h6 class="step">04</h6>
+            <h6>Innovative</h6>
+        </div>
+        <h5>Ensuring our app is desirable, feasible, and viable.</h5>
+        <p>Rather than simply build a theoretical app for a class grade, we wanted our project to encapsulate the qualities of a successful innovation. This meant it had to be desirable to our users, feasible for the development team, and viable to stakeholders.</p>
+        <ul>
+            <li>Keeping in touch with RAs throughout the development process ensured that we created a tool that they desired. We took their advice and prioritized their favorite features, like the grid view and duty indicator. Their visible excitement in every testing session let us know we were going in the right direction.</li>
+            <li>The app consisted of a Django REST API hosted on Heroku and SwiftUI files. Most app functionality is glorified CRUD transactions. These technologies fit into the skill set of our team, and we have a functional app to prove that the idea is feasible to build.</li>
+            <li>Though our app's users will change yearly as new RAs are hired, the overall lifespan of our app is indefinite. As long as the job of Resident Assistant exists, our app will be useful. The COVID violation feature can be converted to a general housing policy violation tracker after the pandemic ends. There are additional features that could be added as well; we discussed building an announcements board that brings greater functionality to the resident version of the app. Residence can be used at any college or university with RAs - a huge user base. Overall, our app has a lot of potential that investors wouldn't want to miss out on.</li>
+        </ul>
+        <div class="projects-more-button">
+            <a href="contact" target="_blank" class="btn btn-4 btn-4c icon-arrow-right disabled" role="button">DEMO AVAILABLE BY REQUEST</a>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

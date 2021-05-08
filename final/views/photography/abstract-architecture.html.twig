@@ -1,0 +1,56 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../../styles/css/photography.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+    <div class="hero-img container-fluid">
+        <h1>Abstract Architecture</h1>
+    </div>
+    <section class="gallery container-fluid">
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/abstract-architecture/abstract-architecture-001.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/abstract-architecture/abstract-architecture-004.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/abstract-architecture/abstract-architecture-008.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/abstract-architecture/abstract-architecture-005.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/abstract-architecture/abstract-architecture-006.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/abstract-architecture/abstract-architecture-002.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/abstract-architecture/abstract-architecture-007.jpg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/abstract-architecture/abstract-architecture-003.jpg" />
+        </div>
+        <p class="description">These images were created for my final project in a black and white film photography class at Carnegie Mellon. I decided to explore the style of abstract architecture; isolating beauty in the environment around us from the clutter of daily life. This series closely relates to my <a href="roofs-stairs-doors">rooftops and doorways series</a>.</p>
+        <button class="btn btn-4 btn-4c icon-arrow-up scroll-top">SCROLL TO TOP</button>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="../../js/photography.js"></script>
+
+    <style>
+        .hero-img {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.6), 
+                    rgba(0, 0, 0, 0.6)
+                ), url("https://david-domalik-personal-website.s3.amazonaws.com/img/photography-art/abstract-architecture/abstract-architecture-005.jpg");
+            background-position: center center;
+        }
+    </style>
+{% endblock %}
+

@@ -1,0 +1,56 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../../styles/css/photography.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+    <div class="hero-img container-fluid">
+        <h1>Business Headshots</h1>
+    </div>
+    <section class="gallery container-fluid">
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/business/business-001.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/business/business-004.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/business/business-006.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/business/business-008.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/business/business-007.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/business/business-002.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/business/business-005.jpeg" />
+        </div>
+        <div class="frame">
+            <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/business/business-003.jpeg" />
+        </div>
+        <p class="description">I took these headshots as part of my software internship at FPoliSolutions. You can find them on their website, as well as other stock-style photos placed throughout the site.</p>
+        <button class="btn btn-4 btn-4c icon-arrow-up scroll-top">SCROLL TO TOP</button>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="../../js/photography.js"></script>
+
+    <style>
+        .hero-img {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.6), 
+                    rgba(0, 0, 0, 0.6)
+                ), url("https://david-domalik-personal-website.s3.amazonaws.com/img/photography-portrait/business/business-009.jpeg");
+            background-position: center 40%;
+        }
+    </style>
+{% endblock %}
+

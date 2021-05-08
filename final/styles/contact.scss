@@ -1,0 +1,53 @@
+@import 'variables';
+
+/* CONTACT.SCSS */
+
+h1 {
+    font-family: museo-sans-display, sans-serif;
+    font-size: $font-size-base * 6;
+    font-weight: 100;
+
+    @media #{$xl} {
+        font-size: $font-size-base * 5;
+    }
+
+    @media #{$lg} {
+        font-size: $font-size-base * 3;
+    }
+}
+
+form {
+    width: 60%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    position: relative;
+
+    @media #{$xl} {
+        width: 80%;
+    }
+
+    @media #{$sm} {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .btn {
+        position: absolute;
+        right: 0;
+    }
+
+    .form-control {
+        box-shadow: 2px 2px $accent;
+        border-color: $accent;
+
+        &:hover {
+            border-color: $accent;
+            box-shadow: 4px 4px $accent;
+        }
+
+        &:focus {
+            border-width: 2px;
+        }
+    }
+}

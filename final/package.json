@@ -1,0 +1,28 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "common.js",
+  "dependencies": {
+    "@voiceflow/runtime-client-js": "^1.17.0",
+    "bootstrap": "^4.6.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.6.0",
+    "overlayscrollbars": "^1.13.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviddomalik/Personal-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daviddomalik/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/daviddomalik/Personal-Website#readme"
+}

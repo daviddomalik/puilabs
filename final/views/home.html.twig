@@ -1,0 +1,74 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../styles/css/home.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+	<div id="load-animation">
+		<h1 id="first-name">DAVID</h1>
+		<h1 id="last-name">DOMALIK</h1>
+	</div>
+
+	<div id="hello" class="container-fluid">
+		<div>
+			<h1 class="bold">Hi there, my name is <span id="name">David</span>.</h1>
+			<h1>I design creative user-focused solutions to help businesses and individuals reach their full potential.</h1>
+		</div>
+	</div>
+
+	<div id="featured-projects" class="card row">
+		<div class="card-image col-12 col-lg-6 no-left-gutter">
+			<img src="https://david-domalik-personal-website.s3.amazonaws.com/img/our-shopping-list-cover.png"/>
+		</div>
+		<div class="card-body col-12 col-lg-6">
+			<h2>Design & Development</h2>
+			<p>My training as an Information Systems and Human-Computer Interaction student at Carnegie Mellon University has prepared me to design and develop attractive and functional digital applications. I've applied these skills to a variety of personal and professional projects.</p>
+			<a href="projects" class="btn btn-4 btn-4c icon-arrow-right" role="button">SEE MORE</a>
+		</div>
+	</div>
+
+	<div id="featured-photography" class="card row">
+		<div class="card-image col-12 col-lg-6 no-left-gutter">
+			<img src="https://david-domalik-personal-website.s3.amazonaws.com/img/photography-misc/colorado/colorado-002.jpg" />
+		</div>
+		<div class="card-body col-12 col-lg-6">
+			<h2>Photography</h2>
+			<p>With over five years of experience, photography is the perfect way for me to express my creative side and challenge myself to develop skills outside of my profession.</p>
+			<a href="photography" class="btn btn-4 btn-4c icon-arrow-right" role="button">SEE MORE</a>
+		</div>
+	</div>
+
+	<div id="featured-writing" class="card row">
+		<div class="card-image col-12 col-lg-6 no-left-gutter">
+			<img src="https://david-domalik-personal-website.s3.amazonaws.com/img/social-tech-cover.png" />
+		</div>
+		<div class="card-body col-12 col-lg-6">
+			<h2>Emerging Social Technologies</h2>
+			<p>Attending a college of social science helped me realize the greater issues in society and instilled a sense of responsibility in my work. My minor in Societal and Human Impacts of Future Technologies explores how emerging tech affects social systems and expands my perspective beyond just that of the programmer to include policy-makers, politicians, and philosophers.</p>
+			<a href="writing" class="btn btn-4 btn-4c icon-arrow-right" role="button">SEE MORE</a>
+		</div>
+	</div>
+
+	<div id="chatbot">
+		<div id="chat">
+			<ul id="root"></ul>
+			<div id="text-entry">
+				<textarea id="user-input" type="text" rows="2" placeholder="Enter your response..."></textarea>
+				<button id="send" type="button">
+					<i class="fa fa-paper-plane" aria-hidden="true"></i>
+				</button>
+			</div>
+		</div>
+
+		<div id="chatbot-toggle">
+			<i class="fa fa-comments" aria-hidden="true"></i>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="../js/home.js"></script>
+{% endblock %}

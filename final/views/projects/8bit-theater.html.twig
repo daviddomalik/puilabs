@@ -1,0 +1,140 @@
+{% extends "common/common.html.twig" %}
+
+{% block styles %}
+    <link href="../../styles/css/projects.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+    <section class="hero container-fluid dark">
+        <div class="row">
+            <div id="title" class="col-12 col-xl-6">
+                <h1>8-Bit Theater</h1>
+                <h3>A virtual live theater experience bringing communities together.</h3>
+            </div>
+            <div class="col-12 col-xl-6">
+                <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/8bit-theater.jpg" />
+            </div>
+        </div>
+        <div class="row" id="stats">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Team</h6>
+                <p><a href="/index">David Domalik</a> - User Researcher<br />
+                    <a href="https://www.linkedin.com/in/leejaneg/" target="_blank">Jane Lee</a> - Project Manager<br />
+                    <a href="https://asadsheikh.net/" target="_blank">Asad Sheikh</a> - User Researcher<br />
+                    <a href="https://iokafor.com/" target="_blank">Ije Okafor</a> - Designer<br />
+                    <a href="https://www.linkedin.com/in/ugochi-gold-osita-ogbonnaya-44b2a617a/" target="_blank">Ugochi Osita-Ogbonnaya</a> - Designer</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Methods</h6>
+                <p>Generative Think-Aloud<br />
+                    Contextual Inquiry<br />
+                    Speed Dating<br />
+                    Experience Prototyping</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Timeline</h6>
+                <p>User-Centered Research & Design<br />
+                    Fall 2020</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Domain</h6>
+                <p>User Research<br />
+                    Experience Design</p>
+            </div>
+        </div>
+    </section>
+    <section id="pgs" class="row container-fluid">
+        <div class="card card-body problem col-12 col-xl-4">
+            <h6>Problem</h6>
+            <h5>The COVID-19 pandemic has shut down live theater and threatens the livelihood of local artists.</h5>
+            <p>The Kelly Strayhorn Theater came to Carnegie Mellon looking for help as they struggled through the pandemic. The theater was receiving lower engagement with most of their virtual performances compared to usual in-person programming.</p>
+        </div>
+        <div class="card card-body goal col-12 col-xl-4">
+            <h6>Goal</h6>
+            <h5>Revitalize the sense of community that is lacking in online performances.</h5>
+            <p>In an early Q&A session, theater staff expressed that their biggest loss in the online transition was the social aspect of physically bringing a community together. We made it our goal to identify safe ways for theater-goers to interact online until the pandemic passes.</p>
+        </div>
+        <div class="card card-body solution col-12 col-xl-4">
+            <h6>Solution</h6>
+            <h5>Follow an interactive show format using a proximity-based video calling platform.</h5>
+            <p>After months of researching theater attendees, modeling data, and testing prototypes, we concluded that a show format with moderate levels of interaction between the actors and guests received the best engagement. Our example was a murder mystery hosted on <a href="https://gather.town/">Gather.town</a>.</p>
+        </div>
+    </section>
+    <section id="content" class="container-fluid">
+        <h6>Executive Summary</h6>
+        <p>8-Bit Theater is the result of a team project in User-Centered Research and Design, a course at Carnegie Mellon's Human Computer Interaction Institute. Students are challenged to use user research methods to resolve the issues of a real-world client in the local community. Given that I took the class in fall 2020, all instruction and research was conducted remotely.<br /><br />
+        Early in the class we were introduced to our client, the Kelly Strayhorn Theater, and learned about their struggles during the pandemic. My team set out to find ways to improve interaction between performers and the audience through this virtual landscape. We followed the Analysis-Synthesis Bridge Model to guide our research to meet this goal.<br /><br />
+        We began by gaining a better understanding of current virtual theater performances using generative think-aloud and contextual inquiry methods. From there we modeled our observed research in an affinity diagram. The diagram revealed a number of important insights relevant to our project, including an audience desire to influence the show's storyline and the limitations of virtual platforms when recreating a physical space.<br /><br />
+        As our team moved from generative research into design, we tested several potential solutions with our target audience using the speed dating method. This confirmed for us that our final recommendation should provide multiple ways to participate in a show in addition to direct audience-actor interaction. We settled on a murder mystery type show based on our speed dating feedback and went on to develop it as an experience prototype. Showing our model to potential show attendees gave us the confidence to pitch that solution to the Kelly Strayhorn Theater, who reacted very positively to our recommendation.<br /><br />
+        While the class's main goals are to teach user research methods, this project also strengthened my communication and time management skills while working on a team. Now I'm more comfortable reaching out to users and feel confident in my ability to generate valuable ideas based on my conversations with others.</p>
+        <div class="subheader">
+            <h6 class="step">01</h6>
+            <h6>Research Planning</h6>
+        </div>
+        <h5>Meeting the client and learning their pain points.</h5>
+        <p>Before even beginning our research, it was important for my team to become familiar with the client and understand their needs. The Kelly Strayhorn Theater provided us with box office logs and analytics for their website and social media. We ideated several questions from this data to ask the theater management in an hour-long group interview. Our team then regrouped and decided how we want do define our project. We asked ourselves: <strong>How might we improve interaction between performers and the audience in a virtual landscape?</strong></p>
+        <div class="subheader">
+            <h6 class="step">02</h6>
+            <h6>Establishing "What Is"</h6>
+        </div>
+        <h5>Gaining a better understanding of existing virtual theater performances.</h5>
+        <p>Familiarizing ourself with the current standard for virtual theater performances provided an easy way for us to start ideating potential solutions. I conducted our first round of user research interviews and implemented the <strong>think-aloud method for generative research</strong>. During each interview, I asked participants to follow a series of tasks - mostly without assistance - using shows provided by Pittsburgh's Quantum Theater. In the process, I learned what aspects of online shows were and weren't successful at engaging the participant. These discoveries were put into a template to share with my team, keeping the information fresh in my mind and making it easier to communicate to others.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/8bit-theater-UFT.jpg" alt="Usability Findings Template" />
+        <p class="caption">Positive usability feedback for Quantum Theater's video performance "Wild"</p>
+        <p>Quantum Theater's performances played mostly with the audience's perspective. To test the impact of direct audience intervention in a show, I conducted <strong>contextual inquiry</strong> interviews of participants watching Black Mirror: Bandersnatch. For this type of research, it is essential to have the participant in the environment they would usually be conducting the task (in this case, watching Netflix at home). It was unsafe to meet participants at their home due to the pandemic, but fortunately I was able to find new ways to communicate virtually without disrupting the context of the home.</p>
+        <div class="subheader">
+            <h6 class="step">03</h6>
+            <h6>Modeling the Current State</h6>
+        </div>
+        <h5>Interpreting and visualizing all the information collected from user research.</h5>
+        <p>I had collected lots of qualitative data and notes from my user research, but now needed to combine it with my teammates and make sense of it all. Using our knowledge of theater, we developed a <strong>stakeholder map</strong> to visualize all the people who could influence our decisions as well as the relationships between those groups. Our <strong>customer journey map</strong> focused more specifically on a single stakeholder's experience going to the theater.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/8bit-theater-stakeholder-map.jpg" alt="Stakeholder Map" />
+        <p class="caption">Stakeholder map showing individual roles and relationships at the Kelly Strayhorn Theater.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/8bit-theater-customer-journey-map.jpg" alt="Customer Journey Map" />
+        <p class="caption">Customer journey map that follows an audience member's experience attending a live theater show.</p>
+        <p>In the days following our contextual inquiry interviews, my team met and conducted an interpretation session to consolidate our notes. These notes were then transferred onto an <strong>affinity diagram</strong>, which helped us sift through all the user feedback and reveal common themes among their experiences and desires. This process produced four main insights:</p>
+        <ol>
+            <li>Incorporating interactivity and requiring audience participation can keep users more engaged in a show’s storyline.</li>
+            <li>When the audience is asked to participate in a show, they become immersed and expect their interactions to have a significant impact on the plot or on the characters’ environment.</li>
+            <li>Participants from the audience prefer the freedom to make their own decisions when interacting and not just choose from a limited set of options.</li>
+            <li>For online theater to be successful, it should focus on utilizing the unique interactive tools available to digital platforms and not attempt to simply recreate the in-person theater experience.</li>
+        </ol>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/8bit-theater-affinity-diagram.jpg" alt="Affinity Diagram" />
+        <p class="caption">Affinity diagram consisting of our contextual inquiry notes. Insights are highlighted in the top rows.</p>
+        <div class="subheader">
+            <h6 class="step">04</h6>
+            <h6>Picking the Best Future</h6>
+        </div>
+        <h5>Testing our research insights against a variety of possible future states.</h5>
+        <p>These four insights summed up the needs and desires of our target user. But before we went all-in on one idea and started the design process, we conducted <strong>speed dating</strong> research with a broad selection of potential solutions. Developed at Carnegie Mellon, the speed dating research method allowed us to efficiently bounce ideas off our users, confirm their needs, and ensure we only put effort into ideas worth pursuing. In my speed dating session, I presented 15 storyboards and asked participants to quickly give their opinion of each. The storyboards that resonated most with participants revealed three new design opportunities:</p>
+        <ol>
+            <li>Find ways to interact with other users during the AR or VR experiences.</li>
+            <li>Design a new type of a show that involves the audience by having them directly interact and participate with actors.</li>
+            <li>Incorporate different methods of audience participation (e.g. voting) during a show.</li>
+        </ol>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/8bit-theater-storyboard.jpg" alt="Storyboard" />
+        <p class="caption">One of the fifteen storyboards presented to the participant in a speed dating session.</p>
+        <div class="subheader">
+            <h6 class="step">05</h6>
+            <h6>Modeling the Future</h6>
+        </div>
+        <h5>A final round of user testing with a prototype of our solution.</h5>
+        <p>With our user needs validated and a new list of design opportunities, my team revisited our storyboards and collectively decided that the virtual murder mystery show best fit our research. There were still two uncertainties: how much effort are participants willing to put in to an interactive show, and does their opinion of the show change if the other participants are friends instead of strangers? To get the answers, we created an <strong>experience prototype</strong> to immerse participants in our proposed show. The prototype was built using <a href="https://gather.town/">Gather.town</a>, a video conferencing web app that replicates a physical space by placing avatars on a virtual map and letting users walk around, only communicating with others in close proximity. Feedback on the platform was so positive that it remained in our final recommendation to the Kelly Strayhorn Theater.</p>
+        <img src="https://david-domalik-personal-website.s3.amazonaws.com/img/8bit-theater-experience-prototype.png" alt="Experience Prototype" />
+        <p class="caption">First prototype of our show using Gather.town. Live actors were replaced with TV screens for this demo.</p>
+        <div class="subheader">
+            <h6 class="step">06</h6>
+            <h6>Presentation</h6>
+        </div>
+        <h5>Pitching our final solution to the client.</h5>
+        <p>After months of research and development, we met with the Kelly Strayhorn Theater to present our work. Our recommendation was to put on virtual performances that involve a fair amount of audience interaction such as a murder mystery, but altered in a way that the audience isn't required to be an actor themselves and the show doesn't rely on them. This was important to maintain consistency between every performance as well as to keep participants relaxed and able to enjoy the experience. Gather.town turned out to be the perfect platform to hold such performances.</p>
+        <div class="projects-more-button">
+            <a href="https://david-domalik-personal-website.s3.amazonaws.com/img/8bit-theater.jpg" target="_blank" class="btn btn-4 btn-4c icon-arrow-right" role="button">VIEW POSTER</a>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
