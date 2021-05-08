@@ -76,7 +76,6 @@ function onLoad() {
         document.getElementById("animal-image").setAttribute("src", saved[show].image);
         document.getElementById("animal-image").setAttribute("alt", saved[show].image_alt);
         document.getElementById("animal-info").textContent = saved[show].name + ", " + saved[show].age;
-        
     }
 
     var buttons = document.getElementsByTagName("button");
